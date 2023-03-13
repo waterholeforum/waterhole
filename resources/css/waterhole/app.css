@@ -13,9 +13,9 @@
 
 :root {
     /* Set the hue/saturation/lightness of the main accent color */
-    --accent-h: 255;
-    --accent-s: 100%;
-    --accent-l: 65%;
+    --accent-h: 252;
+    --accent-s: 93%;
+    --accent-l: 58%;
 }
 
 :root[data-theme='dark'] {
