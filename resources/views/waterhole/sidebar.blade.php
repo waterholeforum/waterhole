@@ -10,7 +10,7 @@
 --}}
 
 @guest
-    <div class="bg-warning-soft rounded p-md text-center row wrap gap-sm">
+    <div class="bg-warning-soft rounded p-md text-center row wrap gap-sm full-width">
         <div class="grow stack gap-xs text-xs" style="flex-basis: 25ch">
             <h3 class="h4">Join the conversation.</h3>
             <p>
