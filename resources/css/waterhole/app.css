@@ -7,17 +7,21 @@
 | following Waterhole's default CSS. To discover more variables and
 | classes you might like to override, read about Waterhole's design system:
 |
-|     https://waterhole.dev/docs/design/overview
+| https://waterhole.dev/docs/design/overview
 |
 */
 
 :root {
     /* Set the hue/saturation/lightness of the main accent color */
-    --accent-h: 252;
-    --accent-s: 93%;
-    --accent-l: 58%;
+    --palette-accent-h: 252;
+    --palette-accent-s: 93%;
+    --palette-accent-l: 58%;
 }
 
-:root[data-theme='dark'] {
+[data-theme='light'] {
+    /* Put any light-mode-specific customizations here */
+}
+
+[data-theme='dark'] {
     /* Put any dark-mode-specific customizations here */
 }
