@@ -5,19 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Waterhole\Extend;
 
-class AppServiceProvider extends ServiceProvider
+class WaterholeServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
-    {
-        //
-    }
-
-    /**
-     * Bootstrap any application services.
-     */
     public function boot(): void
     {
         /*
@@ -25,14 +14,20 @@ class AppServiceProvider extends ServiceProvider
         | Waterhole Extenders
         |-----------------------------------------------------------------------
         |
-        | Put any custom CSS in this file, and it will be loaded on every page,
-        | following Waterhole's default CSS. For more information about
+        | The main mechanism by which you'll hook into Waterhole is with
+        | extenders. There are dozens more extenders like this covering all
+        | parts of Waterhole's views and functionality, ready to hook into.
+        |
+        | Learn more: https://waterhole.dev/docs/extending
         |
         */
+
         Extend\Stylesheet::add(resource_path('css/waterhole/app.css'));
+
+        Extend\Header::replace('title', 'waterhole.title');
 
         Extend\DocumentHead::add('waterhole.head');
         Extend\LayoutBefore::add('waterhole.hero');
-        Extend\IndexSidebar::add('waterhole.sidebar', -1);
+        Extend\IndexSidebar::add('waterhole.sidebar', position: -1);
     }
 }
