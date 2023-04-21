@@ -27,7 +27,6 @@ class WaterholeServiceProvider extends ServiceProvider
         Extend\Header::replace('title', 'waterhole.title');
 
         Extend\DocumentHead::add('waterhole.head');
-        Extend\LayoutBefore::add('waterhole.hero');
         Extend\IndexSidebar::add('waterhole.sidebar', position: -1);
     }
 }
