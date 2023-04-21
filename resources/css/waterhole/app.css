@@ -12,16 +12,24 @@
 */
 
 :root {
-    /* Set the hue/saturation/lightness of the main accent color */
-    --palette-accent-h: 252;
+    /* Main accent color */
+    --palette-accent-h: 250;
     --palette-accent-s: 93%;
     --palette-accent-l: 58%;
 }
 
 [data-theme='light'] {
-    /* Put any light-mode-specific customizations here */
+    /* Interface colors in light mode */
+    --palette-bg-hsl: 250 38% 98%;
+    --palette-surface-hsl: 0 100% 100%;
+    --palette-text-hsl: 0 0% 0%;
+    --palette-muted-hsl: 250 20% 50%;
 }
 
 [data-theme='dark'] {
-    /* Put any dark-mode-specific customizations here */
+    /* Interface colors in dark mode */
+    --palette-bg-hsl: 250 20% 8%;
+    --palette-surface-hsl: 250 20% 12%;
+    --palette-text-hsl: 250 20% 93%;
+    --palette-muted-hsl: 250 20% 60%;
 }
