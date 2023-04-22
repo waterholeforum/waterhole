@@ -24,9 +24,8 @@ class WaterholeServiceProvider extends ServiceProvider
 
         Extend\Stylesheet::add(resource_path('css/waterhole/app.css'));
 
-        Extend\Header::replace('title', 'waterhole.title');
-
         Extend\DocumentHead::add('waterhole.head');
-        Extend\IndexSidebar::add('waterhole.sidebar', position: -1);
+
+        Extend\Header::replace('title', 'waterhole.title');
     }
 }
