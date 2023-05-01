@@ -2,12 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Waterhole\Extend;
 
-class WaterholeServiceProvider extends ServiceProvider
+class WaterholeServiceProvider extends Extend\ServiceProvider
 {
-    public function register(): void
+    public function extend(): void
     {
         /*
         |-----------------------------------------------------------------------
