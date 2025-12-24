@@ -6,7 +6,7 @@ use Waterhole\Extend;
 
 class WaterholeServiceProvider extends Extend\ServiceProvider
 {
-    public function extend(): void
+    public function boot(): void
     {
         /*
         |-----------------------------------------------------------------------
@@ -21,10 +21,16 @@ class WaterholeServiceProvider extends Extend\ServiceProvider
         |
         */
 
-        Extend\Stylesheet::add(resource_path('css/waterhole/app.css'));
+        $this->extend(function (Extend\Stylesheet $stylesheet) {
+            $stylesheet->add(resource_path('css/waterhole/app.css'));
+        });
 
-        Extend\DocumentHead::add('waterhole.head');
+        $this->extend(function (Extend\DocumentHead $document) {
+            $document->add('waterhole.head');
+        });
 
-        Extend\Header::replace('title', 'waterhole.title');
+        $this->extend(function (Extend\Layout $layout) {
+            $layout->header->replace('title', 'waterhole.title');
+        });
     }
 }
