@@ -21,15 +21,15 @@ class WaterholeServiceProvider extends Extend\ServiceProvider
         |
         */
 
-        $this->extend(function (Extend\Stylesheet $stylesheet) {
+        $this->extend(function (Extend\Assets\Stylesheet $stylesheet) {
             $stylesheet->add(resource_path('css/waterhole/app.css'));
         });
 
-        $this->extend(function (Extend\DocumentHead $document) {
+        $this->extend(function (Extend\Ui\DocumentHead $document) {
             $document->add('waterhole.head');
         });
 
-        $this->extend(function (Extend\Layout $layout) {
+        $this->extend(function (Extend\Ui\Layout $layout) {
             $layout->header->replace('title', 'waterhole.title');
         });
     }
