@@ -9,7 +9,7 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^12.0",
-        "waterhole/core": "^0.5"
+        "waterhole/core": "^0.6"
     },
     "require-dev": {
         "nunomaduro/collision": "^8.6"
