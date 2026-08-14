@@ -8,6 +8,16 @@ Waterhole is the Laravel-powered community platform giving life to vibrant onlin
 
 > **Note:** This repository is a template for new Waterhole projects. To contribute to the core package, visit the [Waterhole core repository][core].
 
+## Getting Started
+
+Create a new Waterhole project with Composer:
+
+```sh
+composer create-project waterhole/waterhole path/to/forum
+```
+
+Then follow the [installation guide][install] to configure your database, web server, and administrator account.
+
 ## Learning Waterhole
 
 Waterhole has extensive [documentation][docs] and a powerful extension API, making it easy to get started building a completely custom community. Feel free to open issues for anything you find confusing or incomplete.
@@ -32,5 +42,6 @@ In order to ensure that the Waterhole community is welcoming to all, please revi
 - [Waterhole Core Repo][core]
 
 [docs]: https://waterhole.dev/docs
+[install]: https://waterhole.dev/docs/main
 [community]: https://waterhole.dev/community
 [core]: https://github.com/waterholeforum/core
