@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Route;
 use Waterhole\Extend;
 
 class WaterholeServiceProvider extends Extend\ServiceProvider
@@ -31,6 +32,10 @@ class WaterholeServiceProvider extends Extend\ServiceProvider
 
         $this->extend(function (Extend\Ui\Layout $layout) {
             $layout->header->replace('title', 'waterhole.title');
+        });
+
+        $this->extend(function (Extend\Routing\ForumRoutes $routes) {
+            Route::view('/', 'home')->name('home');
         });
     }
 }
